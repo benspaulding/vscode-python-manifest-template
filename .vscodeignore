@@ -1,3 +1,4 @@
+**/*.pxm
 .git*
 .vscode-test/**
 .vscode/**

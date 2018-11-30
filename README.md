@@ -3,6 +3,8 @@
 A [Visual Studio Code][1] [extension][2] with support for Python manifest
 templates, e.g. `MANIFEST.in`.
 
+![syntax hilighting](support/side-by-side.png)
+
 The Python manifest template has always been tricky to deal with. First you
 have to get the right configuration between all of the involved bits, such as
 `setup.py`, `setup.cfg`, and `MANIFEST.in`. Then you then need to play

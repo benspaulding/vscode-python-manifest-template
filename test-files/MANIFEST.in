@@ -1,0 +1,44 @@
+# -- This file is to use during development for visual testing of the
+# -- language files.
+
+include \
+  *.ini \
+  LICENSE.txt \
+  MANIFEST.in \
+  Makefile \
+  Pipfile \
+  README.rst \
+  py.typed \
+  pyproject.toml \
+  setup.* \
+
+# No need to ``graft src`` because setup.py handles getting all of our
+# packages and modules there.
+graft docs
+
+exclude \
+  .env \
+  .git \
+  \#nocomment
+  \##comment
+  \# #comment
+  \## comment
+  \### comment
+  \##\# comment
+  \#n# comment
+  \ ## comment
+  # more comment
+  Pipfile.lock \ # comment
+
+global-exclude \
+  *.py[cod] \
+  .DS_Store \
+
+prune **/.git
+prune **/.mypy_cache
+prune **/.tox
+prune **/.venv
+prune **/__pycache__
+prune build
+prune dist
+prune docs/build

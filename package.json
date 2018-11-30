@@ -1,0 +1,51 @@
+{
+    "name": "python-manifest-template",
+    "displayName": "Python MANIFEST.in",
+    "description": "Grammar & snippets for Python MANIFEST.in template files.",
+    "license": "BSD-3-Clause",
+    "version": "0.0.1",
+    "publisher": "benspaulding",
+    "author": {
+        "name": "Ben Spaulding"
+    },
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "keywords": [
+        "python",
+        "manifest"
+    ],
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "python-manifest-template",
+                "aliases": [
+                    "Python MANIFEST template",
+                    "python-manifest-template"
+                ],
+                "configuration": "./languages/python-manifest-template.json",
+                "extensions": [
+                    "MANIFEST.in"
+                ]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "python-manifest-template",
+                "scopeName": "source.python-manifest-template",
+                "path": "./syntaxes/python-manifest-template.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "python-manifest-template",
+                "path": "./snippets/python-manifest-template.tmSnippets.json"
+            }
+        ]
+    }
+}

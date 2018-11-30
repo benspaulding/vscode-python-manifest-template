@@ -1,0 +1,32 @@
+include \
+  LICENSE.txt \
+  MANIFEST.in \
+  README.rst \
+  py.typed \
+  setup.* \
+
+# Use recursive-include instead of graft because the latter does not
+# behave as expected -- it has some odd behavior with globstars such
+# that `graft **/templates` does not include all dirs named `templates`.
+# These could be useful for a Django project.
+recursive-include src/**/static *
+recursive-include src/**/templates *
+graft docs
+
+exclude \
+  .env* \
+  .git* \  # Files like `.gitignore`, `.gitmodules`, etc.
+
+global-exclude \
+  *.py[!cod] \
+  .DS_Store \
+
+# See previous note about recursive-include/graft.
+recursive-exclude **/.git *
+recursive-exclude **/.mypy_cache *
+recursive-exclude **/.tox *
+recursive-exclude **/.venv *
+recursive-exclude **/__pycache__ *
+prune build
+prune dist
+prune docs/build

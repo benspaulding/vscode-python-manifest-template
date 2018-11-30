@@ -1,0 +1,79 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Python MANIFEST template",
+  "scopeName": "source.python-manifest-template",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#globbing"
+    },
+    {
+      "include": "#structure"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "explanation": "Actions",
+          "name": "support.function.python-manifest-template",
+          "comment": "Supported template actions.",
+          "match": "^\\s*((((global|recursive)-)?(in|ex)clude)|graft|prune)(\\|$|\\s+)??"
+        }
+      ]
+    },
+    "globbing": {
+      "patterns": [
+        {
+          "explanation": "Glob characters",
+          "name": "constant.language.python-manifest-template",
+          "comment": "Special glob characters (according to Python's distutils and fnmatch modules).",
+          "match": "[*?]"
+        },
+        {
+          "explanation": "Character set",
+          "comment": "A glob character set as handled by Python's distutils and fnmatch modules, e.g., `[!abc]",
+          "match": "(\\[(?!!?\\]))(!?)(.+?)(\\])",
+          "captures": {
+            "1": {
+              "name": "constant.language.python-manifest-template"
+            },
+            "2": {
+              "name": "constant.language.python-manifest-template"
+            },
+            "3": {
+              "name": "string.unquoted.python-manifest-template"
+            },
+            "4": {
+              "name": "constant.language.python-manifest-template"
+            }
+          }
+        }
+      ]
+    },
+    "structure": {
+      "patterns": [
+        {
+          "explanation": "Comment",
+          "name": "comment.line.number-sign.python-manifest-template",
+          "comment": "Any `#` that is not preceded by a backslash.",
+          "match": "(?<!\\\\)#.*$"
+        },
+        {
+          "explanation": "Comment escape",
+          "name": "constant.character.escape.python-manifest-template",
+          "comment": "Any `#` that is preceded by a backslash.",
+          "match": "\\\\#"
+        },
+        {
+          "explanation": "Line continuation",
+          "name": "constant.character.escape.python-manifest-template",
+          "comment": "Any backslash followed by only whitespace or a comment.",
+          "match": "\\\\(?=\\s*(\\s+#.*)?$)"
+        }
+      ]
+    }
+  }
+}

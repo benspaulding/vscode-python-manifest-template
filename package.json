@@ -3,10 +3,18 @@
     "displayName": "Python MANIFEST.in",
     "description": "Grammar & snippets for Python MANIFEST.in template files.",
     "license": "BSD-3-Clause",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "benspaulding",
     "author": {
         "name": "Ben Spaulding"
+    },
+    "homepage": "https://github.com/benspaulding/vscode-python-manifest-template",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/benspaulding/vscode-python-manifest-template"
+    },
+    "bugs": {
+        "url": "https://github.com/benspaulding/vscode-python-manifest-template/issues"
     },
     "engines": {
         "vscode": "^1.29.0"
@@ -19,6 +27,9 @@
         "Programming Languages",
         "Snippets",
         "Other"
+    ],
+    "recommendations": [
+        "microsoft.python"
     ],
     "contributes": {
         "languages": [

@@ -1,62 +1,67 @@
 {
-    "name": "python-manifest-template",
-    "displayName": "Python MANIFEST.in",
-    "description": "Grammar & snippets for Python MANIFEST.in template files.",
-    "license": "BSD-3-Clause",
-    "version": "0.1.0",
-    "publisher": "benspaulding",
-    "author": {
-        "name": "Ben Spaulding"
-    },
-    "homepage": "https://github.com/benspaulding/vscode-python-manifest-template",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/benspaulding/vscode-python-manifest-template"
-    },
-    "bugs": {
-        "url": "https://github.com/benspaulding/vscode-python-manifest-template/issues"
-    },
-    "engines": {
-        "vscode": "^1.29.0"
-    },
-    "keywords": [
-        "python",
-        "manifest"
-    ],
-    "categories": [
-        "Programming Languages",
-        "Snippets",
-        "Other"
-    ],
-    "recommendations": [
-        "microsoft.python"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "python-manifest-template",
-                "aliases": [
-                    "Python MANIFEST template",
-                    "python-manifest-template"
-                ],
-                "configuration": "./languages/python-manifest-template.json",
-                "extensions": [
-                    "MANIFEST.in"
-                ]
-            }
-        ],
-        "grammars": [
-            {
-                "language": "python-manifest-template",
-                "scopeName": "source.python-manifest-template",
-                "path": "./syntaxes/python-manifest-template.tmLanguage.json"
-            }
-        ],
-        "snippets": [
-            {
-                "language": "python-manifest-template",
-                "path": "./snippets/python-manifest-template.tmSnippets.json"
-            }
-        ]
-    }
+	"name": "python-manifest-template",
+	"displayName": "Python MANIFEST.in",
+	"description": "Grammar & snippets for Python MANIFEST.in template files.",
+	"license": "BSD-3-Clause",
+	"version": "0.1.0",
+	"publisher": "benspaulding",
+	"author": {
+		"name": "Ben Spaulding"
+	},
+	"homepage": "https://github.com/benspaulding/vscode-python-manifest-template",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/benspaulding/vscode-python-manifest-template"
+	},
+	"bugs": {
+		"url": "https://github.com/benspaulding/vscode-python-manifest-template/issues"
+	},
+	"engines": {
+		"vscode": "^1.29.0"
+	},
+	"keywords": [
+		"python",
+		"manifest"
+	],
+	"categories": [
+		"Programming Languages",
+		"Snippets",
+		"Other"
+	],
+	"recommendations": [
+		"microsoft.python"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "python-manifest-template",
+				"aliases": [
+					"Python MANIFEST template",
+					"python-manifest-template"
+				],
+				"configuration": "./languages/python-manifest-template.json",
+				"extensions": [
+					"MANIFEST.in"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "python-manifest-template",
+				"scopeName": "source.python-manifest-template",
+				"path": "./syntaxes/python-manifest-template.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "python-manifest-template",
+				"path": "./snippets/python-manifest-template.tmSnippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "776118a1-40d7-4c60-928b-81080a078b28",
+		"publisherDisplayName": "Ben Spaulding",
+		"publisherId": "27f62f83-b01c-4b89-b543-4dbb2d4155e8"
+	}
 }

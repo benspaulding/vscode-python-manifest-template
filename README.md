@@ -67,6 +67,10 @@ includes first, then excludes, going from most specific to most general.
 7. `recursive-exclude`s
 8. `prune`s
 
+*Remember:* You only need to exclude files get added to the list by default or
+*with your include commands -- *you do not need to fully mirror your
+*`.gitignore` with exclude commands.
+
 #### Anchoring
 
 If a pattern is *anchored* that means it must match the root of the project
@@ -112,7 +116,9 @@ Glob | Becomes regex | Matches | Example
 - Comments are an `#` not escaped with a `\`, i.e., `\#` would not start a comment.
 - Lines can be continued using a `\`.
 
-### Small example
+### Examples
+
+An example of some syntax is useful:
 
 ```python-manifest-template
 include LICENSE.txt
@@ -132,6 +138,8 @@ global-exclude \
 
 prune docs/build
 ```
+
+For a real-world example, have a look at the included [`example/MANIFEST.in`](example/MANIFEST.in).
 
 ### Other resources
 

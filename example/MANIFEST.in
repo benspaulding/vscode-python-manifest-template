@@ -1,32 +1,48 @@
+## --------------------------------
+## Adding files to the distribution
+##
+## Setuptools is pretty good about finding the right Python source code, but you may
+## need to add other supporting files.
+
 include \
+  *.ini \
+  AUTHORS.txt \
   LICENSE.txt \
   MANIFEST.in \
-  README.rst \
+  Makefile \
+  Pipfile \           # Include Pipfile.lock? The lib vs. app debate continues ...
+  README.rst \        # Included by default, but excplicit is nice.
   py.typed \
-  setup.* \
+  pyproject.toml \
+  setup.* \           # Same as README.rst above.
 
-# Use recursive-include instead of graft because the latter does not
-# behave as expected -- it has some odd behavior with globstars such
-# that `graft **/templates` does not include all dirs named `templates`.
-# These could be useful for a Django project.
-recursive-include src/**/static *
-recursive-include src/**/templates *
+# Setuptools has implemented `graft` is differently than `prune`. This means that while:
+#   prune **/templates
+# would exclude all /templates directories in the tree,
+#   graft **/templates
+# will not include all /templates directories in the tree. :(
+# But we can lean on `recursive-include` instead.
+#   recursive-include **/templates *
+# We can be even smarter and only include /templates directories from packages within
+# our source code with:
+recursive-include src/*/**/templates *
+
 graft docs
+# There is no need to `graft` the src dir because setup.py handles getting all of our
+# packages and modules there. But you can if you have a lot of data files (like /static
+# and /templates in a Django project) for ease.
+# graft src
 
-exclude \
-  .env* \
-  .git* \  # Files like `.gitignore`, `.gitmodules`, etc.
+
+## ------------------------------------
+## Removing files from the distribution
+##
+## Setuptools is pretty good about excluding appropriate bits, but you may need to
+## remove files that were added in the commands above
 
 global-exclude \
-  *.py[!cod] \
+  *.py[co] \          # Only required if including files / grafting trees that may contain bytecode.
   .DS_Store \
 
-# See previous note about recursive-include/graft.
-recursive-exclude **/.git *
-recursive-exclude **/.mypy_cache *
-recursive-exclude **/.tox *
-recursive-exclude **/.venv *
-recursive-exclude **/__pycache__ *
-prune build
-prune dist
+prune **/__pycache__  # Same as *.py[co] above.
 prune docs/build

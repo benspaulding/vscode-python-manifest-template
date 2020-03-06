@@ -1,68 +1,67 @@
 {
-  "include": {
-    "prefix": "include",
-    "description": "Include files matching the given pattern(s), which are anchored to the root of the project.",
-    "body": "include ${1:LICENSE.txt}$0"
-  },
-  "exclude": {
-    "prefix": "exclude",
-    "description": "Exclude files matching the given pattern(s), which are anchored to the root of the project.",
-    "body": "exclude ${1:.env*}$0"
-  },
-  "global-include": {
-    "prefix": "global-include",
-    "description": "Include files matching the given pattern(s) anywhere in the project.",
-    "body": "global-include ${0:file/pattern*}"
-  },
-  "global-exclude": {
-    "prefix": "global-exclude",
-    "description": "Exclude files matching the given pattern(s) anywhere in the project.",
-    "body": "global-exclude ${1:*.py[cod]}$ {2:.DS_Store}$0"
-  },
-  "recursive-include": {
-    "prefix": "recursive-include",
-    "description": "Include all files matching the given pattern(s) under the given directory pattern.",
-    "body": "recursive-include ${1:**/templates} ${2:*.html}${0: *.txt}"
-  },
-  "recursive-exclude": {
-    "prefix": "recursive-exclude",
-    "description": "Exclude all files matching the given pattern(s) under the given directory pattern.",
-    "body": "recursive-exclude ${1:**/static} ${2:*.foo}${0: *.bar}"
-  },
-  "graft": {
-    "prefix": "graft",
-    "description": "Include all files under the given directory pattern.",
-    "body": "graft ${0:docs}"
-  },
-  "prune": {
-    "prefix": "prune",
-    "description": "Exclude all files under the given directory pattern.",
-    "body": "prune ${0:docs/build}"
-  },
-  "default": {
-    "prefix": "default",
-    "description": "An opinionated templated based on opinionated package layout.",
-    "body": [
-      "include \\",
-      "  *.ini \\",
-      "  LICENSE.txt \\",
-      "  MANIFEST.in \\",
-      "  Makefile \\",
-      "  Pipfile* \\",
-      "  README.rst \\",
-      "  py.typed \\",
-      "  pyproject.toml \\",
-      "  setup.* \\",
-      "",
-      "graft docs",
-      "",
-      "global-exclude \\",
-      "  *.py[co] \\",
-      "  .DS_Store \\",
-      "",
-      "prune **/__pycache__",
-      "prune docs/build",
-      ""
-    ]
-  }
+	"include": {
+		"prefix": "include",
+		"description": "Include files matching the given pattern(s), which are anchored to the root of the project.",
+		"body": "include ${1:LICENSE.txt}$0"
+	},
+	"exclude": {
+		"prefix": "exclude",
+		"description": "Exclude files matching the given pattern(s), which are anchored to the root of the project.",
+		"body": "exclude ${1:.env*}$0"
+	},
+	"global-include": {
+		"prefix": "global-include",
+		"description": "Include files matching the given pattern(s) anywhere in the project.",
+		"body": "global-include ${0:file/pattern*}"
+	},
+	"global-exclude": {
+		"prefix": "global-exclude",
+		"description": "Exclude files matching the given pattern(s) anywhere in the project.",
+		"body": "global-exclude ${1:*.py[cod]}$ {2:.DS_Store}$0"
+	},
+	"recursive-include": {
+		"prefix": "recursive-include",
+		"description": "Include all files matching the given pattern(s) under the given directory pattern.",
+		"body": "recursive-include ${1:**/templates} ${2:*.html}${0: *.txt}"
+	},
+	"recursive-exclude": {
+		"prefix": "recursive-exclude",
+		"description": "Exclude all files matching the given pattern(s) under the given directory pattern.",
+		"body": "recursive-exclude ${1:**/static} ${2:*.foo}${0: *.bar}"
+	},
+	"graft": {
+		"prefix": "graft",
+		"description": "Include all files under the given directory pattern.",
+		"body": "graft ${0:docs}"
+	},
+	"prune": {
+		"prefix": "prune",
+		"description": "Exclude all files under the given directory pattern.",
+		"body": "prune ${0:docs/build}"
+	},
+	"default": {
+		"prefix": "default",
+		"description": "An opinionated templated based on opinionated package layout.",
+		"body": [
+			"include \\",
+			"  *.ini \\",
+			"  LICENSE \\",
+			"  MANIFEST.in \\",
+			"  Makefile \\",
+			"  README.rst \\",
+			"  py.typed \\",
+			"  pyproject.toml \\",
+			"  setup.* \\",
+			"",
+			"graft docs",
+			"",
+			"global-exclude \\",
+			"  *.py[co] \\",
+			"  .DS_Store \\",
+			"",
+			"prune **/__pycache__",
+			"prune docs/build",
+			""
+		]
+	}
 }

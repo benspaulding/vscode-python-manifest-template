@@ -1,17 +1,19 @@
 {
 	"name": "python-manifest-template",
 	"displayName": "Python MANIFEST.in",
-	"description": "Grammar & snippets for Python MANIFEST.in template files.",
+	"description": "Grammar, snippets for Python MANIFEST.in template files",
 	"license": "BSD-3-Clause",
-	"version": "0.1.1",
+	"version": "1.0.0",
 	"publisher": "benspaulding",
 	"author": {
-		"name": "Ben Spaulding"
+		"name": "Ben Spaulding",
+		"email": "ben@spaulding.im",
+		"url": "https://www.benspaulding.com"
 	},
 	"homepage": "https://github.com/benspaulding/vscode-python-manifest-template",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/benspaulding/vscode-python-manifest-template"
+		"url": "https://github.com/benspaulding/vscode-python-manifest-template.git"
 	},
 	"bugs": {
 		"url": "https://github.com/benspaulding/vscode-python-manifest-template/issues"
@@ -20,8 +22,8 @@
 		"vscode": "^1.29.0"
 	},
 	"keywords": [
-		"python",
-		"manifest"
+		"manifest",
+		"python"
 	],
 	"categories": [
 		"Programming Languages",
@@ -39,10 +41,10 @@
 					"Python MANIFEST template",
 					"python-manifest-template"
 				],
-				"configuration": "./languages/python-manifest-template.json",
-				"extensions": [
+				"filenames": [
 					"MANIFEST.in"
-				]
+				],
+				"configuration": "./language-configuration.json"
 			}
 		],
 		"grammars": [
@@ -63,5 +65,9 @@
 		"id": "776118a1-40d7-4c60-928b-81080a078b28",
 		"publisherDisplayName": "Ben Spaulding",
 		"publisherId": "27f62f83-b01c-4b89-b543-4dbb2d4155e8"
+	},
+	"prettier": {
+		"printWidth": 88,
+		"useTabs": true
 	}
 }

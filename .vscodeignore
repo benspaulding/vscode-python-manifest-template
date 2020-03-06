@@ -1,4 +1,4 @@
-**/*.pxm
-.git*
-.vscode-test/**
+.gitignore
 .vscode/**
+assets/src/**
+vsc-extension-quickstart.md

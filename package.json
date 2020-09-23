@@ -3,7 +3,7 @@
 	"displayName": "Python MANIFEST.in",
 	"description": "Grammar, snippets for Python MANIFEST.in template files",
 	"license": "BSD-3-Clause",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"icon": "assets/icon.png",
 	"publisher": "benspaulding",
 	"author": {
